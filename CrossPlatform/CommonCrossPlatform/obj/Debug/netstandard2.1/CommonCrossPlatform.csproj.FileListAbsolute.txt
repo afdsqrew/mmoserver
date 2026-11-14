@@ -1,0 +1,13 @@
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\bin\Debug\netstandard2.1\CommonCrossPlatform.deps.json
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\bin\Debug\netstandard2.1\CommonCrossPlatform.dll
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\bin\Debug\netstandard2.1\CommonCrossPlatform.pdb
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.GeneratedMSBuildEditorConfig.editorconfig
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.AssemblyInfoInputs.cache
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.AssemblyInfo.cs
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.csproj.CoreCompileInputs.cache
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.dll
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.pdb
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCrossPlatform.csproj.AssemblyReference.cache
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\bin\Debug\netstandard2.1\ProtocolCrossPlatform.dll
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\bin\Debug\netstandard2.1\ProtocolCrossPlatform.pdb
+D:\_svn_work\cs-stu-v1-18\CrossPlatform\CommonCrossPlatform\obj\Debug\netstandard2.1\CommonCr.56757A45.Up2Date
