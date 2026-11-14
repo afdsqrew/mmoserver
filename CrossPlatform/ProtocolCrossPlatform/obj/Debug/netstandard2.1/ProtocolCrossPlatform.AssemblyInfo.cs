@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProtocolCrossPlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9dcc7ee15066d7337ade3fff1748dd45129330a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProtocolCrossPlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProtocolCrossPlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

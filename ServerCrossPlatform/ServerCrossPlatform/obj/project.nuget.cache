@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R+5Abwra7rg=",
+  "dgSpecHash": "GnOtgdQPspI=",
   "success": true,
-  "projectFilePath": "D:\\_svn_work\\cs-stu-v1-18\\ServerCrossPlatform\\ServerCrossPlatform\\ServerCrossPlatform.csproj",
+  "projectFilePath": "D:\\_svn_work\\mmosever\\ServerCrossPlatform\\ServerCrossPlatform\\ServerCrossPlatform.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhuanZ\\.nuget\\packages\\google.protobuf\\3.37.0-rc3\\google.protobuf.3.37.0-rc3.nupkg.sha512",
     "C:\\Users\\ZhuanZ\\.nuget\\packages\\litjson\\0.19.0\\litjson.0.19.0.nupkg.sha512",

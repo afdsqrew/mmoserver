@@ -2113,11 +2113,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\_svn_work\\cs-stu-v1-18\\ServerCrossPlatform\\ServerCrossPlatform\\ServerCrossPlatform.csproj",
+      "projectUniqueName": "D:\\_svn_work\\mmosever\\ServerCrossPlatform\\ServerCrossPlatform\\ServerCrossPlatform.csproj",
       "projectName": "ServerCrossPlatform",
-      "projectPath": "D:\\_svn_work\\cs-stu-v1-18\\ServerCrossPlatform\\ServerCrossPlatform\\ServerCrossPlatform.csproj",
+      "projectPath": "D:\\_svn_work\\mmosever\\ServerCrossPlatform\\ServerCrossPlatform\\ServerCrossPlatform.csproj",
       "packagesPath": "C:\\Users\\ZhuanZ\\.nuget\\packages\\",
-      "outputPath": "D:\\_svn_work\\cs-stu-v1-18\\ServerCrossPlatform\\ServerCrossPlatform\\obj\\",
+      "outputPath": "D:\\_svn_work\\mmosever\\ServerCrossPlatform\\ServerCrossPlatform\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ZhuanZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2135,8 +2135,8 @@
           "framework": "net6.0",
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\_svn_work\\cs-stu-v1-18\\CrossPlatform\\CommonCrossPlatform\\CommonCrossPlatform.csproj": {
-              "projectPath": "D:\\_svn_work\\cs-stu-v1-18\\CrossPlatform\\CommonCrossPlatform\\CommonCrossPlatform.csproj"
+            "D:\\_svn_work\\mmosever\\CrossPlatform\\CommonCrossPlatform\\CommonCrossPlatform.csproj": {
+              "projectPath": "D:\\_svn_work\\mmosever\\CrossPlatform\\CommonCrossPlatform\\CommonCrossPlatform.csproj"
             }
           }
         }

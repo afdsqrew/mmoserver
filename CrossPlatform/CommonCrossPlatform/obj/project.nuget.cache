@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PmcO6whGjhw=",
+  "dgSpecHash": "Le5aoeyhvsQ=",
   "success": true,
-  "projectFilePath": "D:\\_svn_work\\cs-stu-v1-18\\CrossPlatform\\CommonCrossPlatform\\CommonCrossPlatform.csproj",
+  "projectFilePath": "D:\\_svn_work\\mmosever\\CrossPlatform\\CommonCrossPlatform\\CommonCrossPlatform.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ZhuanZ\\.nuget\\packages\\litjson\\0.19.0\\litjson.0.19.0.nupkg.sha512",
     "C:\\Users\\ZhuanZ\\.nuget\\packages\\log4net\\3.5.0\\log4net.3.5.0.nupkg.sha512",

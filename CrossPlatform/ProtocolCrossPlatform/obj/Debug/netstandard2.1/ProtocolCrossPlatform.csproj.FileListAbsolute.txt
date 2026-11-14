@@ -7,3 +7,13 @@ D:\_svn_work\cs-stu-v1-18\CrossPlatform\ProtocolCrossPlatform\bin\Debug\netstand
 D:\_svn_work\cs-stu-v1-18\CrossPlatform\ProtocolCrossPlatform\bin\Debug\netstandard2.1\ProtocolCrossPlatform.pdb
 D:\_svn_work\cs-stu-v1-18\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.dll
 D:\_svn_work\cs-stu-v1-18\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.pdb
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\bin\Debug\netstandard2.1\ProtocolCrossPlatform.deps.json
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\bin\Debug\netstandard2.1\ProtocolCrossPlatform.dll
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\bin\Debug\netstandard2.1\ProtocolCrossPlatform.pdb
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.GeneratedMSBuildEditorConfig.editorconfig
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.AssemblyInfoInputs.cache
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.AssemblyInfo.cs
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.csproj.CoreCompileInputs.cache
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.sourcelink.json
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.dll
+D:\_svn_work\mmosever\CrossPlatform\ProtocolCrossPlatform\obj\Debug\netstandard2.1\ProtocolCrossPlatform.pdb
