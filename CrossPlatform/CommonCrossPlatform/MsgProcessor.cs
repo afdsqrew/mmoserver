@@ -63,6 +63,7 @@ namespace Ymck
             }
             if (!_handlers.TryGetValue(msg.GetType(), out var handler))
             {
+                Logger.Debug("@2");
                 Logger.Debug($"@2 msg.GetType()={msg.GetType()}");
                 return;   // 未注册的类型直接丢弃
             }

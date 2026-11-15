@@ -1,21 +1,48 @@
 ﻿using Google.Protobuf;
 using LitJson;
-using log4net.Config;
-using Microsoft.Extensions.Logging;
 using ServerCrossPlatform.Study;
 using ServerCrossPlatform.Test;
-using System;
-using System.IO;
-using UnityEngine;
 using WebSocketSharp;
 using WebSocketSharp.Server;
-using Ymck;
-using Logger = Ymck.Logger;
 
 namespace Ymck
 {
-    public class UserService_d1_03 : WebSocketBehavior
+    public class UserService_002 : WebSocketBehavior
     {
+        /// <summary>
+        /// d1-03
+        /// </summary>
+        /// <param name="e"></param>
+        protected void OnMessage_002(MessageEventArgs e)
+        {
+            Console.WriteLine(e.Data);
+            this.Send($"from server {e.Data}");
+        }
+
+        /// <summary>
+        /// d1-04
+        /// </summary>
+        /// <param name="e"></param>
+        protected void OnMessage_003(MessageEventArgs e)
+        {
+            Console.WriteLine(e.Data);
+            NetMsg nm = JsonMapper.ToObject<NetMsg>(e.Data);
+
+            NetMsg nm2 = new NetMsg();
+            nm2.Resp = new RespMsg();
+            nm2.Resp.UserReg = new UserRegResp();
+            nm2.Resp.UserReg.Ok = true;
+            nm2.Resp.UserReg.User = new User()
+            {
+                Id = Guid.NewGuid().ToString(),
+                Name = nm.Req.UserReg.Name,
+                Pwd = nm.Req.UserReg.Pwd,
+            };
+
+            string s = JsonMapper.ToJson(nm2);
+            this.Send(s);
+        }
+
         /*
         protected void OnMessage_d2_04(MessageEventArgs e)
         {
@@ -60,32 +87,9 @@ namespace Ymck
         }
 
 
-        protected void OnMessage_d1_04(MessageEventArgs e)
-        {
-            Console.WriteLine(e.Data);
+   
 
-            NetMsg nm = JsonMapper.ToObject<NetMsg>(e.Data);
 
-            NetMsg nm2 = new NetMsg();
-            nm2.Resp = new RespMsg();
-            nm2.Resp.UserReg = new UserRegResp();
-            nm2.Resp.UserReg.Ok = true;
-            nm2.Resp.UserReg.User = new User()
-            {
-                Id = Guid.NewGuid().ToString(),
-                Name = nm.Req.UserReg.Name,
-                Pwd = nm.Req.UserReg.Pwd,
-            };
-
-            string s = JsonMapper.ToJson(nm2);
-            this.Send(s);
-        }
-
-        protected void OnMessage_d1_03(MessageEventArgs e)
-        {
-            Console.WriteLine(e.Data);
-            this.Send($"from server {e.Data}");
-        }
         */
 
         protected override void OnMessage(MessageEventArgs e)
@@ -121,21 +125,26 @@ namespace Ymck
     }
     class Program
     {
-        static void Main_d1_03_2()
+        /// <summary>
+        /// d1-02-网络通信原理与面试问题
+        /// </summary>
+        static void Main_001()
         {
             WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
-            svr.AddWebSocketService<UserService_d1_03>("/UserService");
             svr.Start();
-            Console.WriteLine("111");
+            Console.WriteLine("server start");
             Console.ReadLine();
             svr.Stop();
             Console.WriteLine("svr.Stop");
         }
 
-        static void Main_d1_03()
+        /// <summary>
+        /// d1-03 高性能网络框架
+        /// </summary>
+        static void Main_002()
         {
             WebSocketServer svr = new WebSocketServer("ws://127.0.0.1:8888");
-            svr.AddWebSocketService<UserService_d1_03>("/UserService");
+            svr.AddWebSocketService<UserService_002>("/UserService");
             svr.Start();
             Console.WriteLine("111");
             Console.ReadLine();
@@ -144,13 +153,13 @@ namespace Ymck
         }
 
         /// <summary>
-        /// 第一次期——d0
+        /// d2-04
         /// </summary>
-        static void Main_d2_04()
+        static void Main_003()
         {
-            UserService_d2_04.Instance.Init();
-
+            UserService_001.Instance.Init();
             WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
+            svr.AddWebSocketService<MessaingService_003>("/MessagingService");
             svr.Start();
             Console.WriteLine("111");
             Console.ReadLine();
@@ -158,10 +167,41 @@ namespace Ymck
             Console.WriteLine("svr.Stop");
         }
 
+        /// <summary>
+        /// d2-04
+        /// </summary>
+        static void Main_004()
+        {
+            UserService_001.Instance.Init();
+            WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
+            svr.AddWebSocketService<MessaingService_003>("/MessagingService");
+            svr.Start();
+            Console.WriteLine("111");
+            Console.ReadLine();
+            svr.Stop();
+            Console.WriteLine("svr.Stop");
+        }
+
+
+        static void Main_d1_03_2()
+        {
+            WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
+            svr.AddWebSocketService<UserService_002>("/UserService");
+            svr.Start();
+            Console.WriteLine("111");
+            Console.ReadLine();
+            svr.Stop();
+            Console.WriteLine("svr.Stop");
+        }
+
+
+
+
+
         static void Main(string[] args)
         {
-            Main_d1_03();
-            return;
+            Main_004();
+            //return;
             Logger.Init();
 
             Utils.Init();

@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = ServerCrossPlatform
-build_property.ProjectDir = D:\_svn_work\cs-stu-v1-18\ServerCrossPlatform\ServerCrossPlatform\
+build_property.ProjectDir = D:\_svn_work\mmosever\ServerCrossPlatform\ServerCrossPlatform\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

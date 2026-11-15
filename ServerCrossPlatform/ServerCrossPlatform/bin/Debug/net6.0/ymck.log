@@ -1,11 +1,2 @@
-DEBUG 4 Ymck - HandleAllMsgs = 0
-DEBUG 4 Ymck - HandleAllMsgs = 0
-DEBUG 4 Ymck - HandleAllMsgs = 0
 DEBUG 4 Ymck - @2
-DEBUG 4 Ymck - HandleAllMsgs = 0
-DEBUG 4 Ymck - @2 msg.GetType()=Ymck.NetMsg
-DEBUG 4 Ymck - HandleAllMsgs = 0
-DEBUG 4 Ymck - @2 msg.GetType()=Ymck.NetMsg
-DEBUG 4 Ymck - HandleAllMsgs = 0
-DEBUG 4 Ymck - @2 msg.GetType()=Ymck.NetMsg
-DEBUG 4 Ymck - HandleAllMsgs = 0
+DEBUG 4 Ymck - @2 msg.GetType()=NetMsg

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommonCrossPlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d9dcc7ee15066d7337ade3fff1748dd45129330a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d61cf18bb06019a7e86c9488183df2d5e53a260")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommonCrossPlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommonCrossPlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

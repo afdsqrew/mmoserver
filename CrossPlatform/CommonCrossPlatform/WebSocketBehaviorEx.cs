@@ -63,12 +63,5 @@ namespace Ymck
         }
     }
 
-    public class WebSocketBehaviorEx_d2_04 : WebSocketBehavior
-    {
-        public void SendEx(string data) => Send(data);
 
-        public void SendEx(FileInfo file) => Send(file);
-
-        public void SendEx(byte[] data) => Send(data);
-    }
 }
