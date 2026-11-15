@@ -7,7 +7,10 @@ using Ymck;
 
 namespace ServerCrossPlatform.Study
 {
-    internal class UserMgr_d3_02:Singleton<UserMgr_d3_02>
+    /// <summary>
+    /// d3-02
+    /// </summary>
+    internal class UserMgr_001:Singleton<UserMgr_001>
     {
         List<User> user;
         Dictionary<string, User> dicNameUser = new Dictionary<string, User>();

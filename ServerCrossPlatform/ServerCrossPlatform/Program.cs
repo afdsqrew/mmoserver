@@ -182,11 +182,17 @@ namespace Ymck
             Console.WriteLine("svr.Stop");
         }
 
-
-        static void Main_d1_03_2()
+        /// <summary>
+        /// d1-02
+        /// </summary>
+        static void Main_005()
         {
+            Logger.Init();
+            Logger.Error("66666666");
+
+            UserService_001.Instance.Init();
             WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
-            svr.AddWebSocketService<UserService_002>("/UserService");
+            svr.AddWebSocketService<MessaingService_003>("/MessagingService");
             svr.Start();
             Console.WriteLine("111");
             Console.ReadLine();
@@ -195,12 +201,9 @@ namespace Ymck
         }
 
 
-
-
-
         static void Main(string[] args)
         {
-            Main_004();
+            Main_005();
             //return;
             Logger.Init();
 

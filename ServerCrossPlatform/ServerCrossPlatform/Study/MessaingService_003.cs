@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WebSocketSharp;
 using Ymck;
+using Logger = Ymck.Logger;
 
 namespace ServerCrossPlatform.Study
 {
@@ -16,6 +17,7 @@ namespace ServerCrossPlatform.Study
     {
         protected override void OnMessage(MessageEventArgs e)
         {
+    
             OnMessage003(e);
         }
 

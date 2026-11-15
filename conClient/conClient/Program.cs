@@ -123,6 +123,29 @@ namespace conClient
             Console.WriteLine("client end");
         }
 
+        /// <summary>
+        /// d1-01
+        /// </summary>
+        public static WebSocket clientSocket = null;
+
+        static void Main_007()
+        {
+            using (clientSocket = new WebSocket("ws://localhost:8888/MessagingService"))
+            {
+                UserService_001.Instance.Init();
+
+                clientSocket.OnMessage += OnMessage_005;
+                clientSocket.Connect();
+
+                UserService_001.Instance.DoUserReg("111", "222");
+
+                Console.ReadLine();
+            }
+
+            Console.WriteLine("client end");
+        }
+
+
         static void Main_d3_01()
         {
             using (WebSocket ws = new WebSocket("ws://localhost:8888/UserService"))
@@ -168,24 +191,7 @@ namespace conClient
 
         
 
-        public static WebSocket clientSocket = null;
-   
-        static void Main_d3_02()
-        {
-            using (clientSocket = new WebSocket("c"))
-            {
-                UserService_001.Instance.Init();
-
-                clientSocket.OnMessage += OnMessage_005;
-                clientSocket.Connect();
-
-                UserService_001.Instance.DoUserReg("111","222");
-
-                Console.ReadLine();
-            }
-
-            Console.WriteLine("client end");
-        }
+  
 
 
 
@@ -203,7 +209,7 @@ namespace conClient
 
         static void Main(string[] args)
         {
-            Main_006();
+            Main_007();
             //Main_Current();
         }
 
