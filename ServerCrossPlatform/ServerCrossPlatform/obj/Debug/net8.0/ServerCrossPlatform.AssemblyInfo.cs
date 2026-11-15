@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServerCrossPlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9e8ebac2d9ecc6d2cb13e41a8c713aa47a4ab149")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bea57a99915b201515b93b4ec4779d606c389d10")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServerCrossPlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServerCrossPlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

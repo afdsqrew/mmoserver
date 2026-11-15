@@ -10,7 +10,7 @@ namespace ServerCrossPlatform.Study
     {
         public void Init()
         {
-           MsgProcessor_002.RegHandler<UserRegReq>(OnUserRegReq_001);           //d3-01
+           MsgProcessor_002.RegHandler<UserRegReq>(OnUserRegReq_002);           //d3-01
 
         }
 
@@ -40,6 +40,13 @@ namespace ServerCrossPlatform.Study
                 };
 
                 UserMgr_001.Instance.AddUser(newUser);
+
+
+                var dbUser = newUser.DeepCopyProtobuf<Model.User>();
+                Model.EntityService_001.Instance.Model.Add(dbUser);
+                Model.EntityService_001.Instance.Model.SaveChanges();
+
+
                 nm2.Resp.UserReg.Ok = true;
                 nm2.Resp.UserReg.User = newUser;
             }

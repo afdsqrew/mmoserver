@@ -49,3 +49,14 @@ PY
 sudo iptables-restore < /etc/iptables/rules.v4
 sudo iptables -L INPUT -n --line-numbers | grep -E '8888|REJECT'
 ----
+
+Root@123456
+
+----
+数据库连不上问题
+
+ubuntu@instance-20260901-1256:~$ sudo iptables -t nat -S DOCKER | grep 3306
+-A DOCKER ! -i docker0 -p tcp -m tcp --dport 3306 -j DNAT --to-destination 172.17.0.2:3306
+ubuntu@instance-20260901-1256:~$ sudo iptables -S FORWARD | head -20
+-P FORWARD ACCEPT
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited

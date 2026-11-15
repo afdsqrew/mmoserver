@@ -16,8 +16,8 @@ namespace ServerCrossPlatform.Study
         Dictionary<string, User> dicNameUser = new Dictionary<string, User>();
 
         public User GetUser(string name)
-        { 
-            throw new NotImplementedException();
+        {
+            return null;
         }
 
         public void AddUser(User user)

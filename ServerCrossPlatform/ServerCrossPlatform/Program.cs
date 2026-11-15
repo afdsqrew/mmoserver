@@ -1,5 +1,6 @@
 ﻿using Google.Protobuf;
 using LitJson;
+using Model;
 using ServerCrossPlatform.Study;
 using ServerCrossPlatform.Test;
 using WebSocketSharp;
@@ -200,10 +201,31 @@ namespace Ymck
             Console.WriteLine("svr.Stop");
         }
 
+        /// <summary>
+        /// d2
+        /// </summary>
+        static void Main_006()
+        {
+            Logger.Init();
+            Logger.Error("66666666");
+            EntityService_001.Instance.Init();
+
+            UserService_001.Instance.Init();
+            WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
+            svr.AddWebSocketService<MessaingService_003>("/MessagingService");
+            svr.Start();
+            Console.WriteLine("111");
+            Console.ReadLine();
+            svr.Stop();
+            EntityService_001.Instance.OnDestroy();
+            Console.WriteLine("svr.Stop");
+        }
+
+
 
         static void Main(string[] args)
         {
-            Main_005();
+            Main_006();
             //return;
             Logger.Init();
 

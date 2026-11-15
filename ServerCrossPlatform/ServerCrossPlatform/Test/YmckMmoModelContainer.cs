@@ -4,12 +4,16 @@ namespace ServerCrossPlatform.Test
 {
     public partial class YmckMmoModelContainer : DbContext
     {
-        /*
         public YmckMmoModelContainer()
-            : base("name=YmckMmoModelContainer")
         {
         }
-        */
+
+        /*
+public YmckMmoModelContainer()
+   : base("name=YmckMmoModelContainer")
+{
+}
+*/
 
         /*@@@@@
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

@@ -16,15 +16,13 @@ namespace ServerCrossPlatform.Test
 
         public void Init()
         {
-            //Model = new YmckMmoModelContainer();
-            //Model.Database.CreateIfNotExists();
-
-
             const string conn =
                 "Server=127.0.0.1;Port=3306;Database=ymckmmo;Uid=root;Pwd=12345678;SslMode=none;CharSet=utf8mb4";
+            var serverVersion = new MySqlServerVersion(new Version(5, 5, 20));
             //新
-            DbContextOptions  options = new DbContextOptionsBuilder<YmckMmoModelContainer>().UseSqlServer(conn).Options;
+            DbContextOptions  options = new DbContextOptionsBuilder<YmckMmoModelContainer>().UseMySql(conn, serverVersion).Options;
             Model = new YmckMmoModelContainer(options);
+            Model.Database.EnsureCreated();
         }
 
         public void Destroy()
