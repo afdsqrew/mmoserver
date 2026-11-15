@@ -17,8 +17,8 @@ namespace ServerCrossPlatform.Study
     {
         public void Init()
         {
-           //不知道内部怎么做的 
-           MsgProcessor_002.RegHandler<UserRegReq>(OnUserRegReq_Custom);
+           MsgProcessor_002.RegHandler<UserRegReq>(OnUserRegReq_001);           //d3-01
+
         }
 
         public void OnUserRegReq(WebSocketBehaviorEx<Session> sender, UserRegReq req)
@@ -37,8 +37,12 @@ namespace ServerCrossPlatform.Study
         }
             
 
-
-        public void OnUserRegReq_Custom(WebSocketBehaviorEx_001 sender, UserRegReq req)
+        /// <summary>
+        /// d3-01
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="req"></param>
+        public void OnUserRegReq_001(WebSocketBehaviorEx_001 sender, UserRegReq req)
         {
             NetMsg nm2 = new NetMsg();
             nm2.Resp = new RespMsg();

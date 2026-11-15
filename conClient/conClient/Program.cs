@@ -58,7 +58,7 @@ namespace conClient
         {
             using (WebSocket ws = new WebSocket("ws://localhost:8888/UserService"))
             {
-                ws.OnMessage += GetWs_OnMessage_d2_02;
+                ws.OnMessage += OnMessage_005;
                 ws.Connect();
 
                 var nm = new NetMsg();
@@ -81,7 +81,7 @@ namespace conClient
         {
             using (WebSocket ws = new WebSocket("ws://localhost:8888/MessagingService"))
             {
-                ws.OnMessage += GetWs_OnMessage_d2_02;
+                ws.OnMessage += OnMessage_005;
                 ws.Connect();
                 Console.Write("111");
                 var nm = new NetMsg();
@@ -97,14 +97,39 @@ namespace conClient
             Console.WriteLine("client end");
         }
 
+        /// <summary>
+        /// d3-01
+        /// </summary>
+        static void Main_006()
+        {
+            using (WebSocket ws = new WebSocket("ws://localhost:8888/MessagingService"))
+            {
+                Console.Write("Main_006 1");
+
+                UserService_001.Instance.Init();
+
+                ws.OnMessage += OnMessage_006;
+                ws.Connect();
+                var nm = new NetMsg();
+                nm.Req = new ReqMsg();
+                nm.Req.UserReg = new UserRegReq();
+                nm.Req.UserReg.Name = "111";
+                nm.Req.UserReg.Pwd = "222";
+
+                ws.Send(nm.ToByteArray());
+                Console.Write("Main_006 2");
+                Console.ReadLine();
+            }
+            Console.WriteLine("client end");
+        }
 
         static void Main_d3_01()
         {
             using (WebSocket ws = new WebSocket("ws://localhost:8888/UserService"))
             {
-                UserService_d3_01.Instance.Init();
+                UserService_001.Instance.Init();
 
-                ws.OnMessage += GetWs_OnMessage_d2_02;
+                ws.OnMessage += OnMessage_005;
                 ws.Connect();
 
                 var nm = new NetMsg();
@@ -122,20 +147,26 @@ namespace conClient
             Console.WriteLine("client end");
         }
 
-        private static void GetWs_OnMessage_d3_01(object sender, MessageEventArgs e)
-        {
-            NetMsg nm = NetMsg.Parser.ParseFrom(e.RawData);
-            Console.WriteLine($"RESP:{JsonMapper.ToJson(nm)}");
-        }
-
-
-        private static void GetWs_OnMessage_d2_02(object sender, MessageEventArgs e)
+        private static void OnMessage_005(object sender, MessageEventArgs e)
         {
             NetMsg nm = NetMsg.Parser.ParseFrom(e.RawData);
             Console.Write("OnBack:" + nm.Resp.UserReg.User.Name);
             //Console.WriteLine($"RESP:{JsonMapper.ToJson(nm)}");
-            
         }
+
+
+        /// <summary>
+        /// d3-01
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void OnMessage_006(object sender, MessageEventArgs e)
+        {
+            NetMsg nm = NetMsg.Parser.ParseFrom(e.RawData);
+            MsgProcessor_002.Process(null, nm);
+        }
+
+        
 
         public static WebSocket clientSocket = null;
    
@@ -143,12 +174,12 @@ namespace conClient
         {
             using (clientSocket = new WebSocket("c"))
             {
-                UserService_d3_01.Instance.Init();
+                UserService_001.Instance.Init();
 
-                clientSocket.OnMessage += GetWs_OnMessage_d2_02;
+                clientSocket.OnMessage += OnMessage_005;
                 clientSocket.Connect();
 
-                UserService_d3_01.Instance.DoUserReg("111","222");
+                UserService_001.Instance.DoUserReg("111","222");
 
                 Console.ReadLine();
             }
@@ -172,7 +203,7 @@ namespace conClient
 
         static void Main(string[] args)
         {
-            Main_005();
+            Main_006();
             //Main_Current();
         }
 
