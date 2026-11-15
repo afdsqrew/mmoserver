@@ -1,0 +1,101 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "conClient/1.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.37.0-rc3",
+          "LitJson": "0.19.0",
+          "WebSocketSharp-netstandard": "1.0.1",
+          "CommonCrossPlatform": "1.0.0.0",
+          "ProtocolCrossPlatform": "1.0.0.0"
+        },
+        "runtime": {
+          "conClient.dll": {}
+        }
+      },
+      "Google.Protobuf/3.37.0-rc3": {
+        "runtime": {
+          "lib/netstandard2.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.37.0.0",
+            "fileVersion": "3.37.0.0"
+          }
+        }
+      },
+      "LitJson/0.19.0": {
+        "runtime": {
+          "lib/netstandard2.1/LitJSON.dll": {
+            "assemblyVersion": "0.19.0.0",
+            "fileVersion": "0.19.0.0"
+          }
+        }
+      },
+      "WebSocketSharp-netstandard/1.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/websocket-sharp.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "CommonCrossPlatform/1.0.0.0": {
+        "runtime": {
+          "CommonCrossPlatform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ProtocolCrossPlatform/1.0.0.0": {
+        "runtime": {
+          "ProtocolCrossPlatform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "conClient/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.Protobuf/3.37.0-rc3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ravcgHfz01dt404USAgYJ9OvAflYb0PizUeSvgmtSHt8UlKeJ79X4PU43UbHsXucGKI+tKGJberBgVfsqcbiVg==",
+      "path": "google.protobuf/3.37.0-rc3",
+      "hashPath": "google.protobuf.3.37.0-rc3.nupkg.sha512"
+    },
+    "LitJson/0.19.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7hUCUSkNJBwr+K6uqTOsQSbd5AIDrCMg/ya1BPxrSOlPNoPCyDx+0PyXU61FjbRPl7WU2HavV2r89djdJnlV/g==",
+      "path": "litjson/0.19.0",
+      "hashPath": "litjson.0.19.0.nupkg.sha512"
+    },
+    "WebSocketSharp-netstandard/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-knoinAv31vbdxXdypnzN2MPX5hyntVLWceq6OdWRXkr9zzqp/RWbxSuLFGbkW8De1061URgNAN43BUTlgMx1CA==",
+      "path": "websocketsharp-netstandard/1.0.1",
+      "hashPath": "websocketsharp-netstandard.1.0.1.nupkg.sha512"
+    },
+    "CommonCrossPlatform/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProtocolCrossPlatform/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

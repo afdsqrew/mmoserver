@@ -1,0 +1,33 @@
+﻿<log4net>
+  <appender name="ColoredConsoleAppender" type="log4net.Appender.ManagedColoredConsoleAppender">
+    <mapping>
+      <level value="ERROR" />
+      <foreColor value="Red" />
+    </mapping>
+    <mapping>
+      <level value="INFO" />
+      <foreColor value="Green" />
+    </mapping>
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date %-5level - %message%newline" />
+    </layout>
+  </appender>
+  
+	<appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+		<file value="ymck.log" />
+		<appendToFile value="true" />
+		<maximumFileSize value="100KB" />
+		<maxSizeRollBackups value="2" />
+
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%level %thread %logger - %message%newline" />
+		</layout>
+	</appender>
+	
+	<!-- Set root logger level to DEBUG and its only appender to A1 -->
+	<root>
+		<level value="DEBUG" />
+		<appender-ref ref="ColoredConsoleAppender" />
+		<appender-ref ref="RollingFile" />
+	</root>
+</log4net>

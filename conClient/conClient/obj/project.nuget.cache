@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Gk8/rzzkfds=",
+  "success": true,
+  "projectFilePath": "D:\\_svn_work\\mmosever\\conClient\\conClient\\conClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ZhuanZ\\.nuget\\packages\\google.protobuf\\3.37.0-rc3\\google.protobuf.3.37.0-rc3.nupkg.sha512",
+    "C:\\Users\\ZhuanZ\\.nuget\\packages\\litjson\\0.19.0\\litjson.0.19.0.nupkg.sha512",
+    "C:\\Users\\ZhuanZ\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\ZhuanZ\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\ZhuanZ\\.nuget\\packages\\websocketsharp-netstandard\\1.0.1\\websocketsharp-netstandard.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

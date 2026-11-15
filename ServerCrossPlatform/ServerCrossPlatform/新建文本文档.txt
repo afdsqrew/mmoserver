@@ -1,0 +1,51 @@
+https://cloud.oracle.com/compute/instances?region=ap-tokyo-1
+
+Canonical Ubuntu
+版本
+24.04
+
+Canonical Ubuntu
+版本
+24.04
+
+ubuntu
+
+公共 IP 地址
+168.110.47.81
+复制
+用户名
+ubuntu
+
+tail -f /dev/null | dotnet ServerCrossPlatform.dll   # 保持 stdin 一直开着
+
+
+/home/ubuntu/mmoserver/mmoserver/ServerCrossPlatform/ServerCrossPlatform/bin/Debug/net6.0
+
+tail -f /dev/null | dotnet ServerCrossPlatform.dll   # 保持 stdin 一直开着
+
+----
+
+② 再放行 OS iptables
+按 Oracle 官方做法改 /etc/iptables/rules.v4，在末尾 REJECT 之前插入规则。这段是幂等的，直接整块粘贴：
+
+bash
+
+sudo cp /etc/iptables/rules.v4 /etc/iptables/rules.v4.bak
+
+sudo python3 - <<'PY'
+p = '/etc/iptables/rules.v4'
+s = open(p, encoding='utf-8').read()
+if '--dport 8888' in s:
+    print('已存在 8888 规则，跳过')
+else:
+    marker = '-A INPUT -j REJECT --reject-with icmp-host-prohibited'
+    assert marker in s, '找不到 REJECT 行，请手工 nano 检查 rules.v4'
+    s = s.replace(marker,
+                  '-A INPUT -p tcp -m state --state NEW -m tcp --dport 8888 -j ACCEPT\n' + marker, 1)
+    open(p, 'w', encoding='utf-8').write(s)
+    print('已插入 8888 放行规则')
+PY
+
+sudo iptables-restore < /etc/iptables/rules.v4
+sudo iptables -L INPUT -n --line-numbers | grep -E '8888|REJECT'
+----
