@@ -128,22 +128,32 @@ namespace conClient
         /// </summary>
         public static WebSocket clientSocket = null;
 
+
+
+        private static void OnOpen_1116(object sender, EventArgs e)
+        {
+            Console.WriteLine("OnOpen_1116");
+            UserService_001.Instance.DoUserReg(Guid.NewGuid().ToString(), Guid.NewGuid().ToString());
+        }
+
         static void Main_007()
         {
-            using (clientSocket = new WebSocket("ws://localhost:8888/MessagingService"))
+            //using (clientSocket = new WebSocket("ws://localhost:8888/MessagingService"))
+            using (clientSocket = new WebSocket("ws://168.110.47.81:8888/MessagingService"))
             {
                 UserService_001.Instance.Init();
 
                 clientSocket.OnMessage += OnMessage_005;
+                clientSocket.OnOpen += OnOpen_1116;
                 clientSocket.Connect();
 
-                UserService_001.Instance.DoUserReg("111", "222");
 
                 Console.ReadLine();
             }
 
             Console.WriteLine("client end");
         }
+
 
 
         static void Main_d3_01()

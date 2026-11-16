@@ -23,6 +23,7 @@ namespace ServerCrossPlatform.Study
 
         protected void OnMessage003(MessageEventArgs e)
         {
+            Console.Write("---收到消息");
             NetMsg nm = NetMsg.Parser.ParseFrom(e.RawData);
             //这里不知道源码
             MsgProcessor_002.Process(this, nm);
