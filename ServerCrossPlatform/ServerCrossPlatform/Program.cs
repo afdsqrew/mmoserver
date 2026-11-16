@@ -211,7 +211,7 @@ namespace Ymck
             EntityService_001.Instance.Init();
 
             UserService_001.Instance.Init();
-            WebSocketServer svr = new WebSocketServer("ws://localhost:8888");
+            WebSocketServer svr = new WebSocketServer("ws://0.0.0.0:8888");
             svr.AddWebSocketService<MessaingService_003>("/MessagingService");
             svr.Start();
             Console.WriteLine("111");
