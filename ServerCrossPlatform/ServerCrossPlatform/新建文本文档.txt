@@ -60,3 +60,7 @@ ubuntu@instance-20260901-1256:~$ sudo iptables -t nat -S DOCKER | grep 3306
 ubuntu@instance-20260901-1256:~$ sudo iptables -S FORWARD | head -20
 -P FORWARD ACCEPT
 -A FORWARD -j REJECT --reject-with icmp-host-prohibited
+---
+//数据库连不上
+sudo iptables -I FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+
